@@ -20,4 +20,4 @@ spec:
         - name: load_rate
           value: "10"
         - name: load_url
-          value: "http://example/com"        
+          value: "http://example.com"        
