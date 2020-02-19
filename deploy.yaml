@@ -1,0 +1,23 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: nukeit
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nukeit
+    spec:
+      nodeSelector:
+        "beta.kubernetes.io/os": linux
+      containers:
+      - image: m3ssana/nukeit
+        name: nukeit
+        env:
+        - name: load_duration
+          value: "10"
+        - name: load_rate
+          value: "10"
+        - name: load_url
+          value: "http://example/com"        
